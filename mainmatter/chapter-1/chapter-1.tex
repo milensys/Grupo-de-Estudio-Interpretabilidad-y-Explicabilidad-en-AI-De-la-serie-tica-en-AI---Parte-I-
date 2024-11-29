@@ -1,0 +1,198 @@
+\begin{refsection}[references/chapter-1.bib]
+\chapter{Sesión 1: Fundamentos de la Interpretabilidad y de la Explicabilidad en la IA}
+\label{chapter:chapter-1}
+
+\section{Introducción}
+La IA está transformando industrias clave mediante modelos predictivos avanzados. Sin embargo, el uso creciente de modelos de "caja negra" plantea desafíos éticos y prácticos relacionados con su interpretabilidad y explicabilidad. Este capítulo presenta los conceptos fundamentales de estas disciplinas, esenciales para garantizar la transparencia, confianza y adopción responsable de la IA en áreas críticas como la salud, las finanzas y la educación.
+
+\subsection{Objetivos del Capítulo}
+\begin{itemize}
+    \item Definir los conceptos de \textbf{interpretabilidad} y \textbf{explicabilidad} en el contexto de la IA.
+    \item Diferenciar entre \textbf{interpretabilidad intrínseca} y \textbf{explicabilidad post-hoc}.
+    \item Introducir herramientas clave (\texttt{Scikit-learn}, \texttt{Pandas}) y sus aplicaciones prácticas.
+    \item Reflexionar sobre la importancia ética y social de la interpretabilidad.
+\end{itemize}
+
+\subsection{Fecha}
+
+Martes 3 de diciembre de 2024 de 7-9 pm.
+
+\subsection{Referencias Clave para este Capítulo}
+El contenido de este capítulo se apoya en diversas referencias clave que destacan la importancia de la interpretabilidad y explicabilidad en la IA. Estas referencias son esenciales tanto desde una perspectiva teórica como práctica.
+
+\subsubsection{Capítulos Pertinentes del Libro de Christoph Molnar}
+El libro \textit{Interpretable Machine Learning} de Christoph Molnar es una referencia fundamental para comprender los conceptos y técnicas descritos en este capítulo. Los capítulos específicos que abordan los temas tratados incluyen:
+\begin{itemize}
+    \item \textbf{Capítulo 1:} Introducción a la interpretabilidad y su importancia en la IA.
+    \item \textbf{Capítulo 3:} Fundamentos teóricos de la interpretabilidad, incluyendo definiciones clave y ejemplos básicos.
+    \item \textbf{Capítulo 5:} Descripción de las técnicas de modelado intrínsecamente interpretable, como árboles de decisión y regresión logística.
+\end{itemize}
+
+\subsubsection{Artículos Académicos Clave}
+Además del libro de Molnar, algunos artículos académicos destacados ofrecen un contexto adicional y amplían la comprensión de los conceptos fundamentales:
+
+\begin{itemize}
+    \item Lundberg, S. M., \& Lee, S. I. (2017). A Unified Approach to Interpreting Model Predictions. 
+    Este artículo seminal introduce SHAP, un método ampliamente utilizado para la explicabilidad post-hoc. 
+    DOI: \texttt{10.5555/3295222.3295230}. Disponible en: \url{https://proceedings.neurips.cc/paper_files/paper/2017/file/8a20a8621978632d76c43dfd28b67767-Paper.pdf}
+    \item Doshi-Velez, F., \& Kim, B. (2017). Towards a Rigorous Science of Interpretable Machine Learning. 
+    Este trabajo proporciona una base conceptual y formal para la interpretabilidad en IA. 
+    DOI: \texttt{10.48550/arXiv.1702.08608}. Disponible en: \url{https://arxiv.org/abs/1702.08608}
+    \item Wachter, S., Mittelstadt, B., \& Russell, C. (2017). Counterfactual Explanations Without Opening the Black Box: Automated Decisions and the GDPR. 
+    Este artículo discute la importancia de la explicabilidad en el contexto ético y legal, con énfasis en el GDPR. 
+    DOI: \texttt{10.2139/ssrn.3063289}. Disponible en: \url{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3063289}
+\end{itemize}
+
+
+\subsubsection{Datasets Relevantes para Ejemplos y Ejercicios}
+Los ejemplos prácticos en este capítulo utilizan datasets ampliamente reconocidos, lo que facilita la replicación de los resultados:
+\begin{itemize}
+    \item \textbf{Pima Indians Diabetes Dataset:} Este dataset es ideal para demostrar la regresión logística, ya que incluye características clínicas y un objetivo binario \cite{uci_pima_indians_diabetes}.
+    \item \textbf{Titanic Dataset:} Este dataset se utiliza comúnmente para enseñar modelos de clasificación, como árboles de decisión \cite{kaggle_titanic_dataset}.
+\end{itemize}
+
+
+\subsubsection{Software y Herramientas Clave}
+Las bibliotecas de software utilizadas para las implementaciones prácticas incluyen:
+\begin{itemize}
+    \item \textbf{\texttt{Scikit-learn}:} Ofrece modelos interpretables como árboles de decisión y regresión logística, así como herramientas para visualización de características y análisis de datos.
+    \item \textbf{\texttt{Pandas}:} Fundamental para manipular y explorar datos en el proceso de modelado.
+    \item \textbf{\texttt{Matplotlib}:} Utilizada para visualizar resultados y análisis de características.
+\end{itemize}
+
+
+\section{Definiciones y Conceptos Clave}
+\subsection{Interpretabilidad}
+\textbf{Interpretabilidad} es la capacidad de un modelo para ser comprendido directamente por humanos. Los modelos interpretables suelen ser más simples y permiten rastrear sus predicciones hasta las características de entrada.
+
+\textbf{Ejemplo:} En un árbol de decisión, cada nodo representa una decisión basada en un umbral de una característica, lo que permite explicar claramente cómo se derivó una predicción.
+
+\subsection{Explicabilidad}
+\textbf{Explicabilidad} se refiere a los métodos y herramientas utilizadas para interpretar los resultados de modelos complejos (e.g., redes neuronales profundas). Estas explicaciones son generadas a posteriori (\textit{post-hoc}).
+
+\textbf{Ejemplo:} Técnicas como SHAP o LIME explican la contribución de cada característica en la predicción de un modelo.
+
+\subsection{Diferencias Clave}
+\begin{itemize}
+    \item \textbf{Interpretabilidad Intrínseca:} Propiedad inherente de modelos simples, como árboles de decisión o regresión logística.
+    \item \textbf{Explicabilidad Post-hoc:} Métodos adicionales diseñados para analizar modelos complejos.
+    \item \textbf{Compromiso Precisión-Interpretabilidad:} Los modelos interpretables suelen ser menos precisos en problemas complejos; los modelos explicables ofrecen mayor precisión a costa de mayor complejidad.
+\end{itemize}
+
+\section{Importancia de la Interpretabilidad y la Explicabilidad}
+\subsection{Ética y Regulación}
+La transparencia en la toma de decisiones es fundamental en sectores regulados. Por ejemplo, el Artículo 22 del GDPR exige que las decisiones automatizadas sean explicables.
+
+\subsection{Adopción y Confianza}
+Los modelos explicables permiten a los usuarios comprender y confiar en las predicciones, lo que facilita su adopción en entornos críticos.
+
+\subsection{Identificación y Mitigación de Sesgos}
+La explicabilidad ayuda a detectar y corregir sesgos en los datos y los modelos, promoviendo un uso más equitativo de la IA.
+
+\section{Casos de Estudio}
+\subsection{Predicción de Diabetes con Regresión Logística}
+\textbf{Objetivo:} Identificar pacientes en riesgo de diabetes utilizando variables clínicas como glucosa, edad e índice de masa corporal (IMC).
+
+\textbf{Modelo:} Regresión logística, que es intrínsecamente interpretable.
+
+\textbf{Mejora:} Visualizar los coeficientes del modelo para mostrar la importancia de cada característica.
+
+\textbf{Código:}
+\begin{lstlisting}[language=Python]
+from sklearn.linear_model import LogisticRegression
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# Cargar datos
+df = pd.read_csv('diabetes.csv')  # Dataset Pima Indians Diabetes
+X = df.drop('Outcome', axis=1)
+y = df['Outcome']
+
+# Escalamiento de características
+from sklearn.preprocessing import StandardScaler
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+
+# Entrenar modelo
+model = LogisticRegression()
+model.fit(X_scaled, y)
+
+# Visualizar coeficientes
+coef = pd.Series(model.coef_[0], index=X.columns)
+coef.sort_values().plot(kind='barh', color='skyblue')
+plt.title('Importancia de Características en la Regresión Logística')
+plt.xlabel('Coeficientes Normalizados')
+plt.ylabel('Características')
+plt.show()
+\end{lstlisting}
+
+\subsection{Clasificación de Supervivencia en el Titanic}
+\textbf{Objetivo:} Predecir la supervivencia de los pasajeros del Titanic utilizando características como clase, género y edad.
+
+\textbf{Modelo:} Árbol de decisión, que permite visualizar las reglas de clasificación.
+
+\textbf{Mejora:} Añadir una visualización gráfica del árbol de decisión.
+
+\textbf{Código:}
+\begin{lstlisting}[language=Python]
+from sklearn.tree import DecisionTreeClassifier, plot_tree
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Cargar datos
+df = pd.read_csv('titanic.csv')
+X = df[['Pclass', 'Age', 'Sex']]  # Seleccionar características
+y = df['Survived']
+
+# Preprocesamiento
+X['Sex'] = X['Sex'].map({'male': 0, 'female': 1})
+X.fillna(X.mean(), inplace=True)
+
+# Entrenar modelo
+clf = DecisionTreeClassifier(max_depth=3)
+clf.fit(X, y)
+
+# Visualizar árbol
+plt.figure(figsize=(12, 8))
+plot_tree(clf, feature_names=X.columns, class_names=['No', 'Yes'], filled=True)
+plt.title('Árbol de Decisión para la Supervivencia en el Titanic')
+plt.show()
+\end{lstlisting}
+
+\section{Ejercicios}
+\subsection{Ejercicio 1: Exploración de Interpretabilidad Intrínseca}
+\textbf{Objetivo:} Practicar la creación y análisis de modelos interpretables como la regresión logística.
+
+\textbf{Tareas:}
+\begin{enumerate}
+    \item Entrenar un modelo de regresión logística para predecir diabetes utilizando el dataset Pima Indians Diabetes.
+    \item Analizar los coeficientes del modelo y crear un gráfico que visualice la importancia de cada característica.
+\end{enumerate}
+
+\subsection{Ejercicio 2: Visualización de Árboles de Decisión}
+\textbf{Objetivo:} Comprender cómo los árboles de decisión estructuran las reglas de clasificación.
+
+\textbf{Tareas:}
+\begin{enumerate}
+    \item Entrenar un modelo de árbol de decisión para predecir la supervivencia en el Titanic.
+    \item Visualizar el árbol y explicar cómo cada nodo afecta las predicciones.
+\end{enumerate}
+
+\subsection{Ejercicio 3: Reflexión Ética}
+\textbf{Objetivo:} Analizar las implicaciones éticas de la interpretabilidad en IA.
+
+\textbf{Tareas opcionales:}
+\begin{enumerate}
+    \item Leer el Artículo 22 del GDPR y un caso práctico de decisiones automatizadas.
+    \item Redactar un breve ensayo sobre cómo la explicabilidad puede prevenir decisiones sesgadas.
+\end{enumerate}
+
+\section{Conclusión y Reflexión}
+En este capítulo, hemos introducido los conceptos clave de interpretabilidad y explicabilidad en la IA. Comprender estas ideas es esencial para garantizar que los sistemas de IA sean responsables, equitativos y confiables. En el próximo capítulo, exploraremos SHAP y LIME, técnicas fundamentales para explicar modelos complejos.
+
+
+% Incluye todas las entradas del archivo .bib para el capítulo.
+\nocite{*}
+% Bibliografía del capítulo
+\printbibliography[heading=subbibliography, title={Bibliografía del Capítulo 1}]
+\end{refsection}

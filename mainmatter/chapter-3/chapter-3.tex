@@ -1,0 +1,107 @@
+\begin{refsection}[references/chapter-3.bib]
+\chapter{Fundamentos de la Interpretabilidad y de la Explicabilidad en la IA}
+\label{chapter:chapter-1}
+
+\section{Introducción}
+La Inteligencia Artificial (IA) está transformando industrias clave mediante modelos predictivos avanzados. Sin embargo, el creciente uso de modelos de "caja negra" plantea desafíos éticos y prácticos relacionados con su interpretabilidad y explicabilidad. Este capítulo presenta los conceptos fundamentales de estas disciplinas, que son esenciales para garantizar la transparencia, confianza y adopción responsable de la IA.
+
+\subsection{Objetivos del Capítulo}
+\begin{itemize}
+    \item Definir los conceptos de \textbf{interpretabilidad} y \textbf{explicabilidad} en el contexto de la IA.
+    \item Diferenciar entre \textbf{interpretabilidad intrínseca} y \textbf{explicabilidad post-hoc}.
+    \item Proporcionar una visión general del curso y los objetivos de aprendizaje.
+    \item Introducir herramientas clave (\texttt{Scikit-learn}, \texttt{Pandas}) y casos de estudio.
+\end{itemize}
+
+\section{Definiciones y Conceptos Clave}
+\subsection{Interpretabilidad}
+\textbf{Interpretabilidad} se refiere a la capacidad de un modelo para ser entendido por humanos. Es una propiedad inherente de modelos simples, como los árboles de decisión y la regresión lineal. 
+
+\textbf{Ejemplo:} Un árbol de decisión permite rastrear las decisiones del modelo hasta sus variables de entrada, facilitando la comprensión directa.
+
+\subsection{Explicabilidad}
+\textbf{Explicabilidad}, por otro lado, se refiere a los métodos y herramientas utilizadas para explicar los resultados de modelos complejos, como las redes neuronales profundas, que no son interpretables de manera intrínseca.
+
+\textbf{Ejemplo:} Técnicas como SHAP o LIME generan explicaciones post-hoc que describen cómo las entradas afectaron las predicciones.
+
+\subsection{Diferencias Clave}
+\begin{itemize}
+    \item \textbf{Interpretabilidad Intrínseca:} Propiedad inherente de modelos simples (e.g., árboles de decisión, regresión logística).
+    \item \textbf{Explicabilidad Post-hoc:} Métodos diseñados para explicar modelos complejos.
+    \item \textbf{Nivel de Complejidad:} Los modelos interpretables son más sencillos pero suelen ser menos precisos; los modelos explicables son más complejos y requieren técnicas adicionales para su análisis.
+\end{itemize}
+
+\section{Importancia de la Interpretabilidad y la Explicabilidad}
+\subsection{Ética y Regulación}
+La explicabilidad es crucial para garantizar que las decisiones tomadas por los modelos sean transparentes, especialmente en sectores sensibles como la salud y las finanzas. La regulación, como el Artículo 22 del GDPR, exige la capacidad de explicar decisiones automatizadas.
+
+\subsection{Adopción y Confianza}
+Los usuarios y tomadores de decisiones confían más en los sistemas que pueden comprender, lo que facilita la adopción de la tecnología.
+
+\subsection{Identificación de Sesgos}
+La interpretabilidad permite identificar y mitigar sesgos presentes en los datos o en las decisiones del modelo.
+
+\section{Casos de Estudio}
+\subsection{Predicción de Diabetes con Regresión Logística}
+\begin{itemize}
+    \item \textbf{Objetivo:} Identificar pacientes en riesgo de diabetes utilizando variables clínicas.
+    \item \textbf{Modelo:} Regresión logística, que es intrínsecamente interpretable.
+    \item \textbf{Herramientas:} \texttt{Scikit-learn}.
+\end{itemize}
+
+\subsection{Clasificación de Supervivencia en el Titanic}
+\begin{itemize}
+    \item \textbf{Objetivo:} Predecir la supervivencia de los pasajeros basándose en características como edad, género y clase.
+    \item \textbf{Modelo:} Árbol de decisión, que permite interpretar las reglas de clasificación.
+    \item \textbf{Herramientas:} \texttt{Pandas}, \texttt{Matplotlib}.
+\end{itemize}
+
+\section{Herramientas Prácticas}
+\subsection{\texttt{Scikit-learn}}
+\textbf{Descripción:} Biblioteca de Python para aprendizaje automático que incluye implementaciones de modelos interpretables como regresión lineal, logística y árboles de decisión.
+
+\textbf{Ejemplo:} Entrenar un árbol de decisión en el dataset Titanic:
+\begin{lstlisting}[language=Python]
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+
+# Cargar datos
+data = load_iris()
+X_train, X_test, y_train, y_test = train_test_split(
+    data.data, data.target, test_size=0.3, random_state=42
+)
+
+# Modelo
+clf = DecisionTreeClassifier(max_depth=3)
+clf.fit(X_train, y_train)
+
+# Importancia de características
+print(clf.feature_importances_)
+\end{lstlisting}
+
+\subsection{\texttt{Pandas}}
+\textbf{Descripción:} Biblioteca para manipulación y análisis de datos. Es fundamental para explorar y limpiar datos antes del modelado.
+
+\textbf{Ejemplo:} Análisis descriptivo del dataset Titanic:
+\begin{lstlisting}[language=Python]
+import pandas as pd
+
+# Cargar datos
+df = pd.read_csv("titanic.csv")
+
+# Resumen estadístico
+print(df.describe())
+
+# Análisis de valores faltantes
+print(df.isnull().sum())
+\end{lstlisting}
+
+\section{Conclusión y Reflexión}
+En este capítulo, hemos introducido los conceptos clave de interpretabilidad y explicabilidad en la IA, destacando sus diferencias y aplicaciones. La comprensión de estos fundamentos es esencial para garantizar que los modelos de IA sean responsables y confiables. 
+
+En el próximo capítulo, exploraremos las técnicas SHAP y LIME, que son herramientas poderosas para generar explicaciones post-hoc.
+
+\section*{Referencias}
+\printbibliography[heading=none]
+\end{refsection}

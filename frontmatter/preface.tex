@@ -1,0 +1,242 @@
+\chapter*{Prefacio}
+\addcontentsline{toc}{chapter}{Prefacio}
+
+La IA está transformando la manera en que interactuamos con el mundo, mejorando procesos en áreas como la salud, las finanzas, la educación y la manufactura. Sin embargo, con esta transformación surge una pregunta crítica: ¿cómo podemos garantizar que las decisiones tomadas por los sistemas de IA sean comprensibles, transparentes y éticamente responsables?
+
+La capacidad de explicar cómo y por qué un modelo de IA toma decisiones no solo es esencial para fomentar la confianza de los usuarios, sino también para identificar y mitigar posibles riesgos, sesgos y errores. En este contexto, la \textbf{interpretabilidad} y la \textbf{explicabilidad} se erigen como pilares fundamentales para el desarrollo ético y efectivo de sistemas de IA.
+
+Este grupo de estudio tiene como propósito proporcionar a los participantes una comprensión profunda de estas dos dimensiones cruciales. A lo largo de 11 sesiones estructuradas, exploraremos tanto las bases teóricas como las aplicaciones prácticas de técnicas avanzadas de explicabilidad, abarcando métodos tradicionales y emergentes. Además, reflexionaremos sobre las implicaciones sociales, éticas y regulatorias de estos enfoques, garantizando una perspectiva integral y crítica.
+
+\section*{Estructura del Grupo de Estudio}
+El grupo de estudio, titulado \textbf{Ética en AI: Interpretabilidad y Explicabilidad (Parte I)}, se llevará a cabo todos los \textbf{martes a partir del 3 de diciembre de 2024}, en el horario de 7:00 PM a 9:00 PM. Se excluirán las fechas festivas del 24 y 31 de diciembre de 2024, y el grupo finalizará el martes 25 de febrero de 2025.
+
+La estructura del grupo incluye 11 sesiones temáticas diseñadas para progresar desde los conceptos básicos hasta aplicaciones avanzadas, con un enfoque en la implementación práctica. Cada sesión abordará un tema clave, acompañado de discusiones y actividades prácticas para consolidar los conocimientos adquiridos. A continuación, se detalla el cronograma completo:
+
+\begin{itemize}
+    \item \textbf{Sesión 1: Fundamentos de la Interpletabilidad y de la Explicabilidad (3 de diciembre)}\\
+    Conceptos clave de interpretabilidad y explicabilidad. Diferencias entre interpretabilidad intrínseca y explicabilidad post-hoc. Presentación del curso, objetivos y casos de estudio clave.\\
+    \textbf{Herramientas:} \texttt{Scikit-learn}, \texttt{Pandas}.\\
+    \textbf{Referencias:} Molnar (Capítulos 3.1–3.3, 5).
+
+    \item \textbf{Sesión 2: SHAP y LIME: Técnicas Clásicas (10 de diciembre)}\\
+    Introducción a estas técnicas fundamentales para interpretar modelos de caja negra. Implementación práctica en datasets clásicos como Iris, Titanic y Adult Income Dataset.\\
+    \textbf{Herramientas:} \texttt{SHAP}, \texttt{LIME}, \texttt{Matplotlib}.\\
+    \textbf{Datasets:} Iris (\url{https://archive.ics.uci.edu/ml/datasets/iris}), Titanic (\url{https://www.kaggle.com/c/titanic/data}), Adult Income Dataset (\url{https://archive.ics.uci.edu/ml/datasets/adult}).\\
+    \textbf{Referencias:} Molnar (Capítulos 6, 7, 8, 9.2, 9.5, 9.6), Lundberg \& Lee (2017). DOI: \url{https://doi.org/10.5555/3295222.3295230}.
+
+    \item \textbf{Sesión 3: Repaso Práctico: SHAP y LIME (17 de diciembre)}\\
+    Actividad práctica extendida. Comparación de interpretaciones generadas por SHAP y LIME en diferentes modelos (árboles de decisión, regresión logística y redes neuronales).\\
+    \textbf{Herramientas:} \texttt{SHAP}, \texttt{LIME}.\\
+    \textbf{Datasets:} Iris, Titanic.\\
+    \textbf{Referencias:} Molnar (Capítulos 9.2, 9.5, 9.6).
+
+    \item \textbf{Sesión 4: Eli5 y Surrogate Models (7 de enero)}\\
+    Exploración de modelos sustitutos y la herramienta Eli5. Análisis de modelos complejos mediante simplificaciones como árboles de decisión o modelos lineales.\\
+    \textbf{Herramientas:} \texttt{Eli5}, \texttt{Scikit-learn}.\\
+    \textbf{Referencias:} Molnar (Capítulos 6, 8.6).
+
+    \item \textbf{Sesión 5: Grad-CAM y Saliency Maps (14 de enero)}\\
+    Técnicas visuales para interpretar redes neuronales aplicadas a visión por computadora. Generación de mapas de calor para redes convolucionales (CNN).\\
+    \textbf{Herramientas:} \texttt{TensorFlow}, \texttt{PyTorch}, \texttt{Matplotlib}.\\
+    \textbf{Datasets:} MNIST (\url{http://yann.lecun.com/exdb/mnist/}), CIFAR-10 (\url{https://www.cs.toronto.edu/~kriz/cifar.html}).\\
+    \textbf{Referencias:} Molnar (Capítulos 10.1–10.2).
+
+    \item \textbf{Sesión 6: Attention Mechanisms y Transformers (21 de enero)}\\
+    Introducción a transformers y mecanismos de atención. Implementación práctica para analizar pesos de atención en tareas de clasificación de texto.\\
+    \textbf{Herramientas:} \texttt{Hugging Face Transformers}, \texttt{BERTViz}.\\
+    \textbf{Datasets:} IMDB Reviews (\url{https://ai.stanford.edu/~amaas/data/sentiment/}), SNLI (\url{https://nlp.stanford.edu/projects/snli/}).\\
+    \textbf{Referencias:} Molnar (Capítulo 10.5).
+
+    \item \textbf{Sesión 7: Repaso Práctico: Técnicas Visuales y Transformers (28 de enero)}\\
+    Consolidación de Grad-CAM, Saliency Maps y atención mediante ejemplos prácticos. Discusión de desafíos en interpretabilidad visual.\\
+    \textbf{Herramientas:} \texttt{PyTorch}, \texttt{Hugging Face Transformers}.\\
+    \textbf{Datasets:} MNIST, IMDB Reviews.\\
+    \textbf{Referencias:} Molnar (Capítulos 10.1–10.5).
+
+    \item \textbf{Sesión 8: Contrafactuales y Recourse (4 de febrero)}\\
+    Generación de escenarios contrafactuales para comprender decisiones de IA. Exploración de herramientas avanzadas como DiCE para generar explicaciones contrafactuales en problemas financieros y de salud.\\
+    \textbf{Herramientas:} \texttt{DiCE}, \texttt{Scikit-learn}.\\
+    \textbf{Datasets:} German Credit (\url{https://archive.ics.uci.edu/ml/datasets/statlog+(german+credit+data)}), COMPAS (\url{https://github.com/propublica/compas-analysis}), UCI Heart Disease (\url{https://archive.ics.uci.edu/ml/datasets/heart+Disease}).\\
+    \textbf{Referencias:} Molnar (Capítulo 9.3), Wachter et al. (2017). DOI: \url{https://doi.org/10.2139/ssrn.3063289}.
+
+    \item \textbf{Sesión 9: Evaluación de Explicaciones (11 de febrero)}\\
+    Métodos y métricas modernas para evaluar la calidad de explicaciones generadas. Introducción a las métricas de robustez, coherencia y utilidad.\\
+    \textbf{Herramientas:} \texttt{SHAP}, \texttt{interpretML}, \texttt{Captum}.\\
+    \textbf{Datasets:} German Credit, UCI Heart Disease.\\
+    \textbf{Referencias:} Molnar (Capítulo 3.4), Doshi-Velez \& Kim (2017). DOI: \url{https://doi.org/10.48550/arXiv.1702.08608}.
+
+    \item \textbf{Sesión 10: Aplicaciones en Sectores Clave: Salud, Finanzas y Manufactura (18 de febrero)}\\
+    Estudio de casos reales en salud, finanzas y manufactura. Uso de técnicas explicables en problemas complejos.\\
+    \textbf{Herramientas:} \texttt{SHAP}, \texttt{PyTorch}, \texttt{TensorFlow}.\\
+    \textbf{Datasets:} German Credit, MNIST, UCI Heart Disease.\\
+    \textbf{Referencias:} Molnar (Capítulos 8.5, 8.6, 11), Ghosh et al. (2021). DOI: \url{https://doi.org/10.48550/arXiv.2102.04378}.
+
+    \item \textbf{Sesión 11: Discusión Final: Avances y Perspectivas (25 de febrero)}\\
+    Revisión de conceptos, herramientas y aplicaciones vistas durante el curso. Reflexión grupal sobre el impacto y las oportunidades futuras de la interpretabilidad en IA.\\
+    \textbf{Herramientas:} Variadas según los intereses discutidos en clase.\\
+    \textbf{Referencias:} Molnar (Capítulos 11, 3.6).
+\end{itemize}
+
+
+Cada sesión está diseñada para ofrecer un balance entre teoría y práctica, con actividades que incluyen la implementación de modelos y técnicas explicativas, el análisis crítico de casos reales y la discusión de dilemas éticos relacionados con la IA.
+
+\section*{Objetivos del Grupo de Estudio}
+\begin{itemize}
+    \item Proporcionar una base sólida en los conceptos de interpretabilidad y explicabilidad, diferenciando entre enfoques intrínsecos y post-hoc.
+    \item Capacitar a los participantes en la implementación de técnicas modernas de explicabilidad mediante herramientas de Python como \texttt{SHAP}, \texttt{LIME}, \texttt{TensorFlow} y \texttt{PyTorch}.
+    \item Analizar aplicaciones prácticas en sectores clave, explorando desafíos y soluciones innovadoras.
+    \item Reflexionar sobre las implicaciones sociales, éticas y regulatorias de los sistemas de IA explicable.
+\end{itemize}
+
+A continuación, se presenta el cronograma detallado de las sesiones para la Parte I:
+
+\newpage
+\begin{longtable}{|p{1.2cm}|p{2.8cm}|p{9.5cm}|}
+\hline
+\textbf{Sesión} & \textbf{Fecha} & \textbf{Tema y Descripción} \\
+\hline
+1 & 3 de diciembre & \textbf{Fundamentos de la Interpretabilidad y de la Explicabilidad:} 
+Conceptos clave de interpretabilidad y explicabilidad. Diferencias entre interpretabilidad intrínseca y explicabilidad post-hoc. Presentación del curso, objetivos y casos de estudio clave. 
+\textbf{Herramientas:} \texttt{Scikit-learn}, \texttt{Pandas}. 
+\textbf{Referencias:} Molnar (Capítulos 3.1–3.3, 5). \\
+\hline
+2 & 10 de diciembre & \textbf{SHAP y LIME: Técnicas Clásicas} 
+Introducción a estas técnicas fundamentales para interpretar modelos de caja negra. Implementación práctica en datasets clásicos como Iris, Titanic y Adult Income Dataset. 
+\textbf{Datasets:} Iris (\url{https://archive.ics.uci.edu/ml/datasets/iris}), Titanic (\url{https://www.kaggle.com/c/titanic/data}), Adult Income Dataset (\url{https://archive.ics.uci.edu/ml/datasets/adult}). 
+\textbf{Herramientas:} \texttt{SHAP}, \texttt{LIME}, \texttt{Matplotlib}. 
+\textbf{Referencias:} Molnar (Capítulos 6, 7, 8, 9.2, 9.5, 9.6), Lundberg \& Lee (2017). DOI: \url{https://doi.org/10.5555/3295222.3295230}. \\
+\hline
+3 & 17 de diciembre & \textbf{Repaso Práctico: SHAP y LIME:} 
+Actividad práctica extendida. Comparación de interpretaciones generadas por SHAP y LIME en diferentes modelos (árboles de decisión, regresión logística y redes neuronales). 
+\textbf{Datasets:} Iris, Titanic. 
+\textbf{Herramientas:} \texttt{SHAP}, \texttt{LIME}. 
+\textbf{Referencias:} Molnar (Capítulos 9.2, 9.5, 9.6). \\
+\hline
+4 & 7 de enero & \textbf{Eli5, Surrogate Models y Técnicas Basadas en Reglas:} 
+Exploración de modelos sustitutos y la herramienta Eli5. Introducción a técnicas basadas en reglas como Anchors y RuleFit. 
+\textbf{Herramientas:} \texttt{Eli5}, \texttt{Scikit-learn}, \texttt{Anchors}. 
+\textbf{Referencias:} Molnar (Capítulos 6, 8.6, 9.4). \\
+\hline
+5 & 14 de enero & \textbf{Grad-CAM, Saliency Maps y Multimodalidad:} 
+Técnicas visuales para interpretar redes neuronales aplicadas a visión por computadora y modelos multimodales. 
+\textbf{Datasets:} MNIST (\url{http://yann.lecun.com/exdb/mnist/}), CIFAR-10 (\url{https://www.cs.toronto.edu/~kriz/cifar.html}), Imagenet (\url{http://www.image-net.org/}). 
+\textbf{Herramientas:} \texttt{TensorFlow}, \texttt{PyTorch}, \texttt{Matplotlib}. 
+\textbf{Referencias:} Molnar (Capítulos 10.1–10.2). \\
+\hline
+6 & 21 de enero & \textbf{Attention Mechanisms, Transformers y Modelos Multimodales:} 
+Introducción a transformers y su aplicación en modelos multimodales. Análisis de pesos de atención en tareas de clasificación de texto e imágenes. 
+\textbf{Datasets:} IMDB Reviews (\url{https://ai.stanford.edu/~amaas/data/sentiment/}), SNLI (\url{https://nlp.stanford.edu/projects/snli/}), CLIP Benchmarks (\url{https://github.com/openai/CLIP}). 
+\textbf{Herramientas:} \texttt{Hugging Face Transformers}, \texttt{BERTViz}, \texttt{CLIP Models}. 
+\textbf{Referencias:} Molnar (Capítulo 10.5), Vaswani et al. (2017). DOI: \url{https://doi.org/10.48550/arXiv.1706.03762}. \\
+\hline
+7 & 28 de enero & \textbf{Repaso Práctico: Técnicas Visuales y Multimodales:} 
+Consolidación de Grad-CAM, Saliency Maps y atención mediante ejemplos prácticos en visión y texto. 
+\textbf{Datasets:} MNIST, IMDB Reviews, CLIP Benchmarks. 
+\textbf{Herramientas:} \texttt{PyTorch}, \texttt{Hugging Face Transformers}, \texttt{CLIP Models}. 
+\textbf{Referencias:} Molnar (Capítulos 10.1–10.5). \\
+\hline
+8 & 4 de febrero & \textbf{Contrafactuales, Recourse y Aplicaciones Avanzadas:} 
+Generación de escenarios contrafactuales para comprender decisiones de IA. Uso de contrafactuales en modelos multimodales. 
+\textbf{Datasets:} German Credit (\url{https://archive.ics.uci.edu/ml/datasets/statlog+(german+credit+data)}), COMPAS (\url{https://github.com/propublica/compas-analysis}), UCI Heart Disease (\url{https://archive.ics.uci.edu/ml/datasets/heart+Disease}). 
+\textbf{Herramientas:} \texttt{DiCE}, \texttt{Scikit-learn}, \texttt{CLIP Models}. 
+\textbf{Referencias:} Molnar (Capítulo 9.3), Wachter et al. (2017). DOI: \url{https://doi.org/10.2139/ssrn.3063289}. \\
+\hline
+9 & 11 de febrero & \textbf{Evaluación de Explicaciones:} 
+Métodos y métricas modernas para evaluar la calidad de explicaciones generadas. Introducción a las métricas de robustez, coherencia y utilidad. 
+\textbf{Datasets:} German Credit, UCI Heart Disease. 
+\textbf{Herramientas:} \texttt{SHAP}, \texttt{interpretML}, \texttt{Captum}. 
+\textbf{Referencias:} Molnar (Capítulo 3.4), Doshi-Velez \& Kim (2017). DOI: \url{https://doi.org/10.48550/arXiv.1702.08608}. \\
+\hline
+10 & 18 de febrero & \textbf{Aplicaciones en Sectores Clave: Salud, Finanzas, Manufactura y Educación:} 
+Estudio de casos reales en salud, finanzas, manufactura y educación. Uso de técnicas multimodales para problemas complejos. 
+\textbf{Datasets:} German Credit, MNIST, Imagenet, UCI Heart Disease. 
+\textbf{Herramientas:} \texttt{SHAP}, \texttt{PyTorch}, \texttt{TensorFlow}, \texttt{CLIP Models}. 
+\textbf{Referencias:} Molnar (Capítulos 8.5, 8.6, 11), Ghosh et al. (2021). DOI: \url{https://doi.org/10.48550/arXiv.2102.04378}. \\
+\hline
+11 & 25 de febrero & \textbf{Discusión Final:} 
+Reflexión grupal sobre desafíos y oportunidades futuras. 
+\textbf{Referencias:} Molnar (Capítulos 11, 3.6). \\
+\hline
+\end{longtable}
+
+
+
+
+\section*{Metodología}
+El curso emplea un enfoque balanceado que integra:
+\begin{itemize}
+    \item \textbf{Teoría:} Introducción a conceptos clave y técnicas relevantes.
+    \item \textbf{Práctica:} Implementaciones prácticas en Python utilizando bibliotecas modernas como \texttt{Scikit-learn}, \texttt{SHAP}, \texttt{LIME}, y \texttt{TensorFlow}.
+    \item \textbf{Reflexión ética:} Discusión constante sobre las implicaciones sociales, éticas y regulatorias de la explicabilidad.
+    \item \textbf{Casos reales:} Aplicaciones en problemas prácticos utilizando datasets representativos.
+\end{itemize}
+
+\section*{Objetivos del la Parte I del grupo de estudio}
+\begin{itemize}
+    \item Desarrollar una comprensión profunda de las técnicas de interpretabilidad y explicabilidad en IA.
+    \item Capacitar a los participantes para implementar y evaluar explicaciones en modelos complejos.
+    \item Analizar aplicaciones prácticas en sectores clave, explorando sus desafíos y oportunidades.
+    \item Fomentar una perspectiva crítica sobre las implicaciones sociales y éticas de la IA explicable.
+\end{itemize}
+
+
+\section*{Materiales de Apoyo}
+Para garantizar un aprendizaje efectivo y participativo, los participantes deberán preparar los siguientes materiales antes de cada sesión. Este enfoque permite una mejor comprensión de los temas y facilita la discusión durante el grupo de estudio.
+
+\subsection*{Lecturas Principales}
+\begin{itemize}
+    \item Extractos relevantes de \textit{Interpretable Machine Learning} de Christoph Molnar (\url{https://christophm.github.io/interpretable-ml-book/}).
+    \item Artículos académicos y de investigación, incluyendo:
+    \begin{itemize}
+        \item \textbf{SHAP y LIME:} Lundberg, S. M., \& Lee, S. I. (2017). A Unified Approach to Interpreting Model Predictions. Advances in Neural Information Processing Systems. DOI: \url{https://doi.org/10.5555/3295222.3295230}.
+        \item \textbf{Contrafactuales:} Wachter, S., Mittelstadt, B., \& Russell, C. (2017). Counterfactual Explanations Without Opening the Black Box. Harvard Journal of Law \& Technology. DOI: \url{https://doi.org/10.2139/ssrn.3063289}.
+        \item \textbf{Evaluación de Explicaciones:} Doshi-Velez, F., \& Kim, B. (2017). Towards a Rigorous Science of Interpretable Machine Learning. DOI: \url{https://doi.org/10.48550/arXiv.1702.08608}.
+    \end{itemize}
+    \item \textbf{Documentación de herramientas:}
+    \begin{itemize}
+        \item \texttt{SHAP:} \url{https://github.com/slundberg/shap}.
+        \item \texttt{LIME:} \url{https://github.com/marcotcr/lime}.
+        \item \texttt{Hugging Face Transformers:} \url{https://huggingface.co/docs/transformers/index}.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Algunos datasets para Práctica}
+Los siguientes datasets se utilizarán a lo largo del curso para implementar y probar las técnicas de explicabilidad e interpretabilidad:
+\begin{itemize}
+    \item \textbf{Iris Dataset:} Disponible en: \url{https://archive.ics.uci.edu/ml/datasets/iris}.
+    \item \textbf{Titanic Dataset:} Disponible en: \url{https://www.kaggle.com/competitions/titanic/data}.
+    \item \textbf{MNIST Dataset:} Disponible en: \url{http://yann.lecun.com/exdb/mnist/}.
+    \item \textbf{CIFAR-10 Dataset:} Disponible en: \url{https://www.cs.toronto.edu/~kriz/cifar.html}.
+    \item \textbf{German Credit Dataset:} Disponible en: \url{https://archive.ics.uci.edu/ml/datasets/statlog+(german+credit+data)}.
+    \item \textbf{IMDB Reviews Dataset:} Disponible en: \url{https://ai.stanford.edu/~amaas/data/sentiment/}.
+    \item \textbf{Adult Income Dataset:} Disponible en: \url{https://archive.ics.uci.edu/ml/datasets/adult}.
+    \item \textbf{COMPAS Dataset:} Disponible en: \url{https://github.com/propublica/compas-analysis}.
+    \item \textbf{UCI Heart Disease Dataset:} Disponible en: \url{https://archive.ics.uci.edu/ml/datasets/heart+Disease}.
+    \item \textbf{SNLI Dataset:} Disponible en: \url{https://nlp.stanford.edu/projects/snli/}.
+    \item \textbf{Pima Indians Diabetes Dataset:} Disponible en: \url{https://archive.ics.uci.edu/ml/datasets/diabetes}.
+\end{itemize}
+
+
+\subsection*{Herramientas de Desarrollo y Ejemplos de Código}
+Se recomienda a los participantes instalar y familiarizarse con las siguientes bibliotecas de Python:
+\begin{itemize}
+    \item \texttt{Scikit-learn:} Para crear modelos de aprendizaje automático y realizar análisis básicos (\url{https://scikit-learn.org/}).
+    \item \texttt{Pandas:} Para manipulación y análisis de datos estructurados (\url{https://pandas.pydata.org/}).
+    \item \texttt{TensorFlow} y \texttt{PyTorch:} Para construir y entrenar redes neuronales (\url{https://tensorflow.org/}, \url{https://pytorch.org/}).
+    \item \texttt{SHAP} y \texttt{LIME:} Para generar explicaciones locales y globales (\url{https://github.com/slundberg/shap}, \url{https://github.com/marcotcr/lime}).
+    \item \texttt{DiCE:} Para crear contrafactuales (\url{https://github.com/interpretml/DiCE}).
+    \item \texttt{Captum:} Para interpretabilidad en PyTorch (\url{https://captum.ai/}).
+    \item \texttt{interpretML:} Para análisis de explicaciones y métricas (\url{https://github.com/interpretml/interpret}).
+\end{itemize}
+
+\section*{Invitación Final}
+Este grupo de estudio no es solo una oportunidad para aprender sobre un campo técnico de vanguardia, sino también un espacio para reflexionar sobre cómo podemos construir sistemas de IA más éticos y responsables. 
+
+Invitamos a profesionales, académicos y entusiastas de Python a unirse a esta iniciativa para aprender, colaborar y compartir conocimientos en uno de los campos más críticos y en evolución de tecnologías emergentes.
+
+\vspace{1cm}
+\begin{flushright}
+\textbf{Comunidades Python Colombia y Python Barranquilla} \\
+\vspace{1cm}
+Noviembre de 2024
+\end{flushright}

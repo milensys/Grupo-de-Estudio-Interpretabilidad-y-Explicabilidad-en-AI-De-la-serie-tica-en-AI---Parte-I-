@@ -1,0 +1,140 @@
+\documentclass{layout/epfl-report}
+\usepackage{csquotes}
+
+%% Configuración de la bibliografía
+\usepackage[spanish]{babel} % Idioma español
+\usepackage{svg}
+\usepackage{pdflscape}
+\usepackage{tikz}
+\usepackage{listings}
+\usepackage{comment}
+
+% Configuración básica
+\lstset{
+  basicstyle=\ttfamily\small, % Estilo básico del texto
+  frame=single, % Marco alrededor del código
+  backgroundcolor=\color{gray!10}, % Fondo gris claro
+  keywordstyle=\bfseries\color{blue}, % Palabras clave en azul
+  breaklines=true, % Divide líneas largas automáticamente
+  columns=flexible % Ajusta el espaciado entre caracteres
+}
+
+% IEEE con orden alfabético 
+%\usepackage[style=ieee, sorting=nyt, backend=biber]{biblatex}
+% IEEE con orden por número de aparición (nyt: name-year-title) 
+\usepackage[style=ieee, sorting=none, backend=biber]{biblatex}
+
+
+\DeclareFieldFormat{url}{}
+\DeclareFieldFormat{doi}{\newline DOI: \href{https://doi.org/#1}{#1}}
+\renewcommand{\UrlFont}{\ttfamily\small}
+
+
+% archivos con referencias para cada capitulo
+\addbibresource{references/main.bib}
+\addbibresource{references/chapter-1.bib}
+%\addbibresource{references/chapter-2.bib}
+%\addbibresource{references/chapter-3.bib}
+%\addbibresource{references/chapter-4.bib}
+%\addbibresource{references/chapter-5.bib}
+%\addbibresource{references/chapter-6.bib}
+%\addbibresource{references/chapter-7.bib}
+%\addbibresource{references/chapter-8.bib}
+%\addbibresource{references/chapter-9.bib}
+%\addbibresource{references/chapter-10.bib}
+%\addbibresource{references/chapter-11.bib}
+%\addbibresource{references/referencias_generales.bib}
+%\addbibresource{references/chapter-13.bib}
+%\addbibresource{references/chapter-14.bib}
+%\addbibresource{references/chapter-15.bib}
+%\addbibresource{references/chapter-16.bib}
+%\addbibresource{references/chapter-17.bib}
+%\addbibresource{references/chapter-18.bib}
+%\addbibresource{references/chapter-19.bib}
+%\addbibresource{references/chapter-20.bib}
+
+\DeclareFieldFormat{url}{}
+\DeclareFieldFormat{doi}{\newline DOI: \href{https://doi.org/#1}{#1}}
+\renewcommand{\UrlFont}{\ttfamily\small}
+%% ----------------------------------------------------------------------
+%%    Inicio del documento + Portada (Numeración romana)
+%% ----------------------------------------------------------------------
+
+\begin{document}
+
+\frontmatter
+
+%% Definición de parámetros principales
+\title{Explicabilidad e Interpretabilidad en Inteligencia Artificial (IA)}
+%\subtitle{Explorando dilemas éticos}
+%\author{Nombre del Autor}
+
+\subject{Grupo de Estudio: Ética en IA - Parte I / III} % Solo para la portada
+\affiliation{Serie Ética en IA - Parte I / III} % Solo para la portada
+\coverimage{figures/cover17} % Relación de aspecto 2:3 (retrato) recomendada
+\definecolor{title}{HTML}{F5F5F5} % Color para el título de la portada (Gris Claro)
+
+
+\makecover
+
+\input{frontmatter/title-report}
+\input{frontmatter/preface}
+\input{frontmatter/summary}
+
+\tableofcontents
+%\listoffigures
+%\listoftables
+
+\input{frontmatter/nomenclature}
+
+%% ----------------------------------------------------------------------
+%%    Cuerpo del documento (Numeración arábiga)
+%% ----------------------------------------------------------------------
+
+\mainmatter
+
+% Introducción en español
+
+\input{mainmatter/chapter-1/chapter-1}
+%\input{mainmatter/chapter-2/chapter-2}
+%\input{mainmatter/chapter-3/chapter-3}
+%\input{mainmatter/chapter-4/chapter-4}
+%\input{mainmatter/chapter-5/chapter-5}
+%\input{mainmatter/chapter-6/chapter-6}
+%\input{mainmatter/chapter-7/chapter-7}
+%\input{mainmatter/chapter-8/chapter-8}
+%\input{mainmatter/chapter-9/chapter-9}
+%\input{mainmatter/chapter-10/chapter-10}
+%\input{mainmatter/chapter-11/chapter-11}
+%\input{mainmatter/chapter-12/chapter-12}
+\input{mainmatter/chapter-13/chapter-13}
+%\input{mainmatter/chapter-14/chapter-14}
+%\input{mainmatter/chapter-15/chapter-15}
+%\input{mainmatter/chapter-16/chapter-16}
+%\input{mainmatter/chapter-17/chapter-17}
+%\input{mainmatter/chapter-18/chapter-18}
+%\input{mainmatter/chapter-19/chapter-19}
+%\input{mainmatter/chapter-20/conclusion}
+
+%\input{mainmatter/conclusion}
+
+%% Evitar URLs largos que rompan el formato en la bibliografía
+\setcounter{biburlnumpenalty}{7000}
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{7000}
+
+%% Agregar una bibliografía general a lo ultimo si necesario
+
+
+
+%% ----------------------------------------------------------------------
+%%    Apéndices (Letras para capítulos)
+%% ----------------------------------------------------------------------
+
+\appendix
+
+%\input{appendix/appendix-a}
+%\input{appendix/appendix-b}
+
+
+\end{document}

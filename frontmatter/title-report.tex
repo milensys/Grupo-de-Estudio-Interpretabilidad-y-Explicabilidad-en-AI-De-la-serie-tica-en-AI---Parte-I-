@@ -1,0 +1,108 @@
+\begin{titlepage}
+
+\begin{center}
+
+%% Print the title
+{\makeatletter
+\largetitlestyle\fontsize{45}{45}\selectfont\@title
+\makeatother}
+
+%% Print the subtitle
+{\makeatletter
+\ifdefvoid{\@subtitle}{}{\bigskip\titlestyle\fontsize{16}{14}\selectfont\@subtitle}
+\makeatother}
+
+\bigskip
+\bigskip
+
+%by
+
+\bigskip
+\bigskip
+
+%% Print the name of the author
+{\makeatletter
+\largetitlestyle\fontsize{25}{25}\selectfont\@author
+\makeatother}
+
+\bigskip
+\bigskip
+
+%% Print table with names and student numbers
+%\setlength\extrarowheight{2pt}
+%\begin{tabular}{lc}
+%
+%Student Name & Student Number \\\midrule
+%
+%First Surname & 123456 \\
+%\end{tabular}
+
+\vfill
+
+%% Print some more information at the bottom
+% Título de la serie
+% Título y Descripción General
+\vspace*{\fill} % Centra el contenido verticalmente
+\begin{center}
+    {\Huge \textbf{Ética en IA: Una Serie de la Comunidad Python Colombia y Python Barranquilla}} \\[15pt]
+    {\Large \textbf{Parte I: Interpretabilidad y Explicabilidad en IA}} \\[30pt]
+    
+    {\large Este documento forma parte de la serie \textbf{Ética en IA}, desarrollada en colaboración por las comunidades \textbf{Python Colombia} y \textbf{Python Barranquilla}.} \\[15pt]
+    
+    {\large La serie está estructurada en tres partes, cada una abordando un tema fundamental para el desarrollo ético y responsable de la IA:}
+    \begin{enumerate}[label=\arabic*.]
+        \item \textbf{Parte I: Interpretabilidad y Explicabilidad en IA:} Fundamentos, técnicas, estado del arte y aplicaciones prácticas para construir sistemas de IA comprensibles.
+        \item \textbf{Parte II: Justicia Algorítmica:} Identificación y mitigación de sesgos algorítmicos en sistemas inteligentes.
+        \item \textbf{Parte III: Ética para la Protección del Futuro de los Recursos Genéticos:} Exploración crítica y multidisciplinaria de los desafíos éticos, legales y técnicos relacionados con el manejo de recursos genéticos y secuencias digitales. Este apartado abarca:
+        \begin{itemize}
+            \item \textit{Ciencia Abierta:} Oportunidades y riesgos asociados a la accesibilidad de datos genéticos y su impacto en la innovación científica.
+            \item \textit{CRISPR y Tecnologías de Edición Genética:} Implicaciones éticas y regulatorias del uso de herramientas avanzadas en la manipulación genética.
+            \item \textit{Secuencias Genéticas Digitales (DSI):} Consideraciones sobre el almacenamiento, uso y comercio de información genética en formato digital.
+            \item \textit{Prevención de la Biopiratería:} Estrategias para garantizar la equidad y el respeto por los recursos genéticos, especialmente en comunidades vulnerables.
+        \end{itemize}
+
+    \end{enumerate}
+    
+    {\large En esta primera parte, exploraremos la \textbf{Interpretabilidad y Explicabilidad} de los sistemas de IA, combinando teoría, práctica y reflexión ética.} \\[25pt]
+    
+    {\large \textbf{Duración de la Primera Parte:} Desde el martes 3 de diciembre de 2024 hasta el martes 25 de febrero de 2025. Las sesiones se llevarán a cabo todos los martes de 7:00 PM a 9:00 PM (excepto el 24 y 31 de diciembre de 2024).} \\[15pt]
+    
+    {\large \textit{Aprenderemos cómo diseñar y evaluar sistemas de IA que no solo sean precisos, sino también comprensibles para los usuarios y éticamente responsables.}}
+\end{center}
+\vspace*{\fill}
+
+% Información adicional en la parte inferior
+\noindent
+\rule{\textwidth}{0.4pt} % Línea divisoria
+\vspace{5pt}
+\begin{tabular}{lp{12cm}}
+    \textbf{Grupo de Estudio:} & Serie Ética en IA (Parte I: Interpretabilidad y Explicabilidad). \\[5pt]
+    \textbf{Duración:} & Desde el 3 de diciembre de 2024 hasta el 25 de febrero de 2025 (excepto el 24 y 31 de diciembre de 2024). \\[5pt]
+    \textbf{Horario:} & Todos los martes de 7:00 PM a 9:00 PM. \\[5pt]
+    \textbf{Organizado por:} & Comunidad Python Colombia y Python Barranquilla. \\[5pt]
+%    \textbf{Coordinadores:} & [Espacio para agregar nombres]. \\[5pt]
+%    \textbf{Contacto:} & [Espacio para agregar información de contacto o redes sociales]. \\
+\end{tabular}
+
+
+\bigskip
+\bigskip
+
+%% Add a source and description for the cover and optional attribution for the template
+%\begin{tabular}{p{15mm}p{10cm}}
+%    Cover: & The Rolex Learning Center at EPFL (Modified) \\
+%     Feel free to remove the following attribution, it is not required - still appreciated :-)
+%    Style: & EPFL Report Style, with modifications by Batuhan Faik Derinbay
+%\end{tabular}
+
+\end{center}
+
+%% Insert the EPFL logo at the bottom of the page
+\begin{tikzpicture}[remember picture, overlay]
+    \node[above=10mm] at (current page.south) {%
+         %\includegraphics[width=0.35\linewidth]{layout/epfl/logo-black}
+         \includegraphics[width=0.35\linewidth]{layout/epfl/cc}
+    };
+\end{tikzpicture}
+
+\end{titlepage}
